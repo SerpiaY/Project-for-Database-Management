@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color: #fe5b3d;
+  --second-color: #ffac38;
+  --text-color: #444;
+  --gradinet: linear-gradinet(#fe5b3d, #ffac38);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eeeff1;
+  padding: 15px 100px;
+}
+.logo img {
+  width: 28px;
+}
+.navbar {
+  display: flex;
+}
+.navbar li {
+  position: relative;
+}
+.navbar a {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.navbar a {
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.navbar a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: 0.5s;
+}
+.navbar a:hover::after {
+  width: 100%;
+}
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+.header-btn a {
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.header-btn .sign-in {
+  background: #474fa0;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+.header-btn .sign-in:hover {
+  background: var(--main-color);
+}
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: url(img/Car\ Website\ –\ 1@2x.png);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px 150px;
+}
+
+.text {
+  margin-bottom: 450px;
+}
+
+.text h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+}
+
+.text span {
+  color: var(--main-color);
+}
+
+.text p {
+  margin: 0.5rem 0 1 rem;
+}
+
+.form-container {
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  bottom: 7rem;
+  left: 150px;
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 0.5rem;
+}
+
+.input-box {
+  flex: 1 1 7rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.input-box span {
+  font-weight: 500;
+}
+
+/* .input-box input,
+ .signin-box a{
+   padding: 15px;
+   width: 100%;
+   box-sizing: border-box;
+ } */
+
+.input-box input {
+  width: 145%;
+  display: block;
+  margin-bottom: 10px;
+  padding: 15px;
+  outline: #000;
+  border: none;
+  background: #eeeff1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+.signin-box a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 15px;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.box-check-forgetpass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.checkbox-container input:checked {
+  background-color: #2196f3;
+}
+
+.forgot {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0; 
+}
+
+.divider-line {
+  flex: 1;
+  border-bottom: 1px solid #ccc; /
+}
+
+.divider-text {
+  background-color: #fff; 
+  color: var(--text-color);
+  font-size: 0.85rem;
+  font-weight: 250;
+}
+.box {
+   display: flex;
+   justify-content: space-around; 
+   margin: 20px 0; 
+ }
+ 
+ .google-log,
+ .facebook-log {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid #ccc;
+   padding: 10px;
+   flex-basis: 48%; 
+   margin: 0 1%; 
+   cursor: pointer; 
+ }
+ 
+ .google-log i,
+ .facebook-log i {
+   font-size: 1.5rem; 
+   margin-right: 10px; 
+ }
+ 
+ .google-log h2,
+ .facebook-log h2 {
+   font-size: 1rem;
+   margin: 0;
+ }
+ 
+ 
+ .google-log:hover,
+ .facebook-log:hover {
+   border-color: #888; 
+ }
+ 
+ 
+ .google-log {
+   color: #db4437; 
+ }
+ 
+ .facebook-log {
+   color: #4267B2; 
+ }
+ .sign-up p {
+   text-align: center; 
+   color: #444; 
+   font-size: 1rem; 
+   font-family: 'Poppins', sans-serif; 
+   margin: 10px 0; 
+ }
+ 
+ .sign-up a {
+   color: var(--second-color); 
+   text-decoration: none; 
+   font-weight: 600; 
+ }
+ 

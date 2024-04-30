@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Name Alert</title>
+  </head>
+  <body>
+    <label for="firstName">Enter your First Name: </label>
+    <input type="text" id="firstName" />
+    <button onclick="checkFirstName()">Submit</button>
+
+    <script>
+      function checkFirstName() {
+        const firstName = document.getElementById("firstName").value;
+        if (!firstName) {
+          alert("Too bad for you");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -59,11 +59,17 @@ header {
   color: var(--text-color);
   font-weight: 500;
 }
+.navbar a{
+  font-size: 1rem;
+  padding: 10px 20px;
+  color: var(--text-color);
+  font-weight: 500;
+}
 .navbar a::after {
   content: '';
   width: 0;
   height: 3px;
-  background: var(--gradinet);
+  background: var(--main-color);
   position: absolute;
   bottom: -4px;
   left: 0;

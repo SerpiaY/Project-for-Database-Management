@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Car Rental Website</title>
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="stylesignup.css" />
+    <!--Box Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="img/jeep.png" height="28" alt=""
+      /></a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="Home">Home</a></li>
+        <li><a href="Ride">Ride</a></li>
+        <li><a href="Services">Services</a></li>
+        <li><a href="About">About</a></li>
+        <li><a href="Review">Review</a></li>
+      </ul>
+      <div class="header-btn">
+        <a href="#" class="sign-up">Sign Up</a>
+        <a href="#" class="sign-in">Sign In</a>
+      </div>
+    </header>
+    <!--Home-->
+    <section class="sign" id="sign">
+      <div class="text">
+        <h1><span> Sign up </span></h1>
+      </div>
+      <!-- Input sectiom form -->
+      <div class="form-container">
+        <form id="sign" method="post" action="sign">
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <!-- <div class="box-check-forgetpass">
+            <label for="">
+              <input type="checkbox" name="" id="" />Remember me
+            </label>
+            <div class="forgot-password">
+              <a href="#" class="forgot">Forgot password?</a>
+            </div>
+          </div> -->
+          <div class="signup-box">
+            <!-- <input type="button" value="Login" id="enter" > -->
+
+            <a href="#" class="sign-up">Sign up</a>
+            <!-- function to check if the user had input the email or password? -->
+          </div>
+          <div class="Sign-up-method">
+            <div class="divider">
+              <span class="divider-line"></span>
+              <span class="divider-text">or</span>
+              <span class="divider-line"></span>
+            </div>
+            <div class="box">
+              <div class="google-log">
+                <i class="bx bxl-google"></i>
+                <h2>Google</h2>
+              </div>
+              <div class="facebook-log">
+                <i class="bx bxl-facebook"></i>
+                <h2>Facebook</h2>
+              </div>
+            </div>
+          </div>
+          <div class="sign-in-if-have">
+            <p>Already have an account?<a href="#"> Login</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Link to JS file -->
+    <script src="main.js"></script>
+  </body>
+</html>
