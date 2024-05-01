@@ -28,8 +28,8 @@
         <li><a href="Review">Review</a></li>
       </ul>
       <div class="header-btn">
-        <a href="#" class="sign-up">Sign Up</a>
-        <a href="#" class="sign-in">Sign In</a>
+        <a href="./signup.html" class="sign-up">Sign Up</a>
+        <a href="./login.html" class="sign-in">Sign In</a>
       </div>
     </header>
     <!--Home-->
@@ -41,12 +41,29 @@
       <div class="form-container">
         <form id="sign" method="post" action="sign">
           <div class="input-box">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="Enter your first name"
+              required
+            />
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Enter your last name"
+              required
+            />
             <label for="email">Email</label>
             <input
               type="email"
               id="email"
               name="email"
               placeholder="Enter your email"
+              required
             />
             <label for="password">Password</label>
             <input
@@ -54,7 +71,10 @@
               name="password"
               id="password"
               placeholder="Enter your password"
+              required
             />
+            <label for="DoB">Date of birth</label>
+            <input type="date" id="DoB" name="Date of Birth" required />
           </div>
 
           <!-- <div class="box-check-forgetpass">
@@ -68,7 +88,15 @@
           <div class="signup-box">
             <!-- <input type="button" value="Login" id="enter" > -->
 
-            <a href="#" class="sign-up">Sign up</a>
+            <!-- <a
+              href="#"
+              class="sign-up"
+              onclick="compare(), checkEmailAndPassword()"
+              >Sign up</a
+            > -->
+            <button type="submit" class="sign-up" onclick="signup()">
+              Sign up
+            </button>
             <!-- function to check if the user had input the email or password? -->
           </div>
           <div class="Sign-up-method">
@@ -89,12 +117,13 @@
             </div>
           </div>
           <div class="sign-in-if-have">
-            <p>Already have an account?<a href="#"> Login</a></p>
+            <p>Already have an account?<a href="./login.html"> Login</a></p>
           </div>
         </form>
       </div>
     </section>
     <!-- Link to JS file -->
+    <script src="signup.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -121,7 +121,7 @@
     align-items: center;
     gap: 1rem;
     position: absolute;
-    bottom: 9rem;
+    bottom: 1rem;
     left: 150px;
     background: #fff;
     padding: 20px 40px;
@@ -153,11 +153,11 @@
     padding: 15px;
     outline: #000;
     border: none;
-    background: #eeeff1;
+    background: #eeeff1;  
     border-radius: 0.5rem;
     font-size: 1rem;
   }
-  .signup-box a {
+  .signup-box button {
     width: 100%;
     display: block;
     text-align: center;
