@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Car Rental Website</title>
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="userstyle.css" />
+    <!--Box Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">
+        <img src="img/jeep.png" height="28" alt=""
+      /></a>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+      <ul class="navbar">
+        <li><a href="Home">Home</a></li>
+        <li><a href="Ride">Ride</a></li>
+        <li><a href="Services">Services</a></li>
+        <li><a href="About">About</a></li>
+        <li><a href="Review">Review</a></li>
+      </ul>
+      <div class="header-btn"></div>
+    </header>
+    <section class="user-information" id="user-information">
+      <div class="text">
+        <h1><span>User information</span></h1>
+      </div>
+      <div class="user-container">
+        <div class="user-box">
+          <label for="name">Display name:</label>
+          <span id="displayName"></span>
+          <label for="email">Email:</label>
+          <span id="displayEmail"></span>
+          <label for="doB">Your date of birth:</label>
+          <span id="displayDoB"></span>
+          <label for="liceseNumber">Your license number:</label>
+          <span id="displayLicenseNumber"></span>
+          <a href="index.html">Return to Home Page</a>
+        </div>
+      </div>
+    </section>
+    <script src="signupGET.js"></script>
+  </body>
+</html>

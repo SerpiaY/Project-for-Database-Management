@@ -39,7 +39,10 @@
       </div>
       <!-- Input sectiom form -->
       <div class="form-container">
-        <form id="sign" method="post" action="sign">
+        <!-- <form id="sign" method="post" action="sign"> -->
+
+        <form id="sign">
+          <!-- Use when not have server -->
           <div class="input-box">
             <label for="firstName">First Name</label>
             <input
@@ -75,26 +78,20 @@
             />
             <label for="DoB">Date of birth</label>
             <input type="date" id="DoB" name="Date of Birth" required />
+            <label for="licenseNumber">License Number</label>
+            <input
+              id="licenseNumber"
+              type="number"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,19}"
+              autocomplete="cc-number"
+              maxlength="19"
+              placeholder="xxxx xxxx xxxx xxxx"
+            />
           </div>
 
-          <!-- <div class="box-check-forgetpass">
-            <label for="">
-              <input type="checkbox" name="" id="" />Remember me
-            </label>
-            <div class="forgot-password">
-              <a href="#" class="forgot">Forgot password?</a>
-            </div>
-          </div> -->
           <div class="signup-box">
-            <!-- <input type="button" value="Login" id="enter" > -->
-
-            <!-- <a
-              href="#"
-              class="sign-up"
-              onclick="compare(), checkEmailAndPassword()"
-              >Sign up</a
-            > -->
-            <button type="submit" class="sign-up" onclick="signup()">
+            <button id="submit" type="submit" class="sign-up" href="user.html">
               Sign up
             </button>
             <!-- function to check if the user had input the email or password? -->
