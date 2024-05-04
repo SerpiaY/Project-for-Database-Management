@@ -1,28 +1,53 @@
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector(".login-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    fetchUserAndPass();
+  });
+});
 
-async function login() {
+async function fetchUserAndPass() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  // if (!email) {
-  //   alert("You have not enter the email");
-  // } else if (!password) {
-  //   alert("You have not enter the password");
-  // }
+  try {
+    // const response = await fetch("http://localhost:8081/login", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-type": "application/json; charset=UTF-8"
+    //   },
+    //   body: JSON.stringify({ email, password})
 
-  await fetchUserAndPass(email);
-  if (password != fetchUserAndPass.password) {
-    alert("Username or Password is not correct!")
-  } else {
-    window.location.href("./index.html")
+    // });
+
+    // console.log(email, password)
+    // if (response) {
+    //   window.location.href = "index.html";
+    // } else {
+    //   alert("Username or Password is not correct!");
+    // }
+
+    await fetch("http://localhost:8081/login", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      },
+      //Processing to retrieve data
+      body: JSON.stringify({ email, password })
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log("data ", data);
+      if (data) {
+        window.location.href = "isLogged.html";
+      } else {
+        alert("Username or Password is not correct!");
+      }
+
+    })
+
+
+  } catch (error) {
+    console.error('Error:', error);
+    alert("An error occurred during login.");
   }
-}
-
-async function fetchUserAndPass(email) {
-  const response = await fetch("http://localhost:8081/login", {
-    method: "GET",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8"
-    }
-  });
-  console.log(response)
 }

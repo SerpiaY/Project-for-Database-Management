@@ -1,4 +1,4 @@
-document.getElementById("sign").addEventListener("submit", signup);
+document.getElementById("sign-form").addEventListener("submit", signup);
 
 async function signup(event) {
   event.preventDefault(); //prevent POST method
@@ -17,41 +17,52 @@ async function signup(event) {
   localStorage.setItem("dateBirth", dateBirth);
   localStorage.setItem("licenseNumber", licenseNumber);
 
-  // move user to user information
   window.location.href = "user.html";
+  // Save data in server
 
-  await postNewUser(
-    email,
-    password,
-    lastName,
-    firstName,
-    dateBirth,
-    licenseNumber
-  );
+  // const response = await postNewUser(
+  //   email,
+  //   password,
+  //   lastName,
+  //   firstName,
+  //   dateBirth,
+  //   licenseNumber
+  // );
+  // if (response.ok) {
+  //   window.location.href = "user.html";
+  // } else {
+  //   console.error('Failed to register user');
+  // }
+
 }
 
-async function postNewUser(
-  email,
-  password,
-  lastName,
-  firstName,
-  dateBirth,
-  licenseNumber
-) {
-  const response = await fetch("http://localhost:8081/", {
-    method: "POST",
-    body: JSON.stringify({
-      email,
-      password,
-      lastName,
-      firstName,
-      dateBirth,
-      licenseNumber,
-    }),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
+// async function postNewUser(
+//   email,
+//   password,
+//   lastName,
+//   firstName,
+//   dateBirth,
+//   licenseNumber
+// ) {
+//   try {
+//     const response = await fetch("http://localhost:8081/", {
+//       method: "POST",
+//       body: JSON.stringify({
+//         email,
+//         password,
+//         lastName,
+//         firstName,
+//         dateBirth,
+//         licenseNumber,
+//       }),
+//       headers: {
+//         "Content-type": "application/json; charset=UTF-8",
+//       },
+//     });
 
-  console.log(response);
-}
+//     return response;
+//   } catch (error) {
+//     console.error('Error in postNewUser:', error);
+//     throw error;
+//   }
+// }

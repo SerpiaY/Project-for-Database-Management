@@ -20,13 +20,7 @@
       /></a>
 
       <div class="bx bx-menu" id="menu-icon"></div>
-      <ul class="navbar">
-        <li><a href="Home">Home</a></li>
-        <li><a href="Ride">Ride</a></li>
-        <li><a href="Services">Services</a></li>
-        <li><a href="About">About</a></li>
-        <li><a href="Review">Review</a></li>
-      </ul>
+
       <div class="header-btn">
         <a href="./signup.html" class="sign-up">Sign Up</a>
         <a href="./login.html" class="sign-in">Sign In</a>
@@ -40,7 +34,7 @@
       </div>
       <!-- Input sectiom form -->
       <div class="form-container">
-        <form id="login" method="get" action="login">
+        <form class="login-form" method="post" action="login">
           <div class="input-box">
             <label for="email">Email</label>
             <input
@@ -58,20 +52,10 @@
             />
           </div>
 
-          <div class="box-check-forgetpass">
-            <label for="">
-              <input type="checkbox" name="" id="" />Remember me
-            </label>
-            <div class="forgot-password">
-              <a href="#" class="forgot">Forgot password?</a>
-            </div>
-          </div>
           <div class="signin-box">
             <!-- <input type="button" value="Login" id="enter" > -->
 
-            <button type="submit" class="sign-in" onclick="Login()">
-              Sign in
-            </button>
+            <button type="submit" class="signin">Sign in</button>
             <!-- function to check if the user had input the email or password? -->
           </div>
           <div class="login-method">
@@ -92,7 +76,7 @@
             </div>
           </div>
           <div class="sign-up">
-            <p>Don't have an Account?<a href="./s"> Sign up</a></p>
+            <p>Don't have an Account?<a href="./signup.html"> Sign up</a></p>
           </div>
         </form>
       </div>
