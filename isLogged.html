@@ -20,7 +20,7 @@
         <div class="bx bx-menu " id="menu-icon"></div>
        <ul class="navbar">
         <li><a href="./user.html">User Information</a></li> 
-        <li><a href="Ride">Create Rent</a></li>
+        <li><a href="#ride">Create Rent</a></li>
         <li><a href="About">Edit User</a></li>
         <li><a href="Review">Edit Rent</a></li>
        </ul>    
@@ -37,27 +37,29 @@
         </div>
     <!-- Input sectiom form -->
         <div class="form-container">
-            <form action="">
-                <div class="input-box">
-                    <span>Location</span>
-                    <input type="search" name="" id="" placeholder="Search Places">
+            <section id="ride" class="ride">
+                <form action="post" id="rentForm">
+                    <div class="input-box">
+                        <span>Location</span>
+                        <input type="search" name="" id="location" placeholder="Search Places">
 
-                </div>
-          <div class="input-box">
-            <span>Pick-Up Date</span>
-            <input type="date" name="" id="">
-          </div>      
-          <div class="input-box">
-            <span>Return Date</span>
-            <input type="date" name="" id="">
+                            </div>
+                    <div class="input-box">
+                        <span>Pick-Up Date</span>
+                        <input type="date" name="" id="dateBook">
+                    </div>      
+                    <div class="input-box">
+                        <span>Return Date</span>
+                        <input type="date" name="" id="dateReturn">
 
-          </div>
-          <input type="submit" name="" id="" class="btn">
-            </form>
+            </div>
+            <input type="submit" name="" id="" class="btn">
+                </form>
+            </section>
         </div>
     </section>
     <!--Ride-->
-    <section class="ride" id="ride">
+    <section class="car" id="car">
         <div class="heading">
             <span>How Its Work</span>
             <h1>Rent With 3 Easy Steps</h1>
@@ -85,7 +87,7 @@
         </div>
     </section>
     <!--Services-->
-    <section class="Services" id="services">
+    <section class="services" id="services">
         <div class="heading">
             <span> Best Services</span>
             <h1>Explore Out Top Deals <br> From Top Rated Dealers</h1>
@@ -99,16 +101,16 @@
                 <p> 2023</p>
                 <h3> 2023 Lincoln Navigator </h3>
                 <h2>$77,635 | $1,533 <span>/month</span></h2>
-                <a href ="#" class="btn">Rent Now</a>
+                <a href ="detailsRental.html?car=lincoln-navigator-2023" class="btn">Rent Now</a>
             </div>
             <div class="box">
                 <div class="box-img">
                     <img src="img/2024Mazda.jpeg" alt="">
                 </div>
                 <p> 2024</p>
-                <h3> 2024 Mazda CX - 50</h3>
+                <h3> 2024 Mazda CX 50</h3>
                 <h2>$32,205 | $581 <span>/month</span></h2>
-                <a href ="#" class="btn">Rent Now</a>
+                <a href ="detailsRental.html?car=2024-mazda-cx-50" class="btn">Rent Now</a>
             </div>
             <div class="box">
                 <div class="box-img">
@@ -117,7 +119,7 @@
                 <p> 2024</p>
                 <h3> 2024 Nissan Rouge </h3>
                 <h2>$40,890 | $641 <span>/month</span></h2>
-                <a href ="#" class="btn">Rent Now</a>
+                <a href ="detailsRental.html?car=2024-nissan-rouge" class="btn">Rent Now</a>
             </div>
             <div class="box">
                 <div class="box-img">
@@ -126,7 +128,7 @@
                 <p> 2024</p>
                 <h3> 2024 Jeep Grand</h3>
                 <h2>$58,635 | $799 <span>/month</span></h2>
-                <a href ="#" class="btn">Rent Now</a>
+                <a href ="detailsRental.html?car=2024-jeep-grand" class="btn">Rent Now</a>
             </div>
             <div class="box">
                 <div class="box-img">
@@ -135,19 +137,22 @@
                 <p> 2024 </p>
                 <h3> 2024 Kia EV6</h3>
                 <h2>$49.987 | $680 <span>/month</span></h2>
-                <a href ="#" class="btn">Rent Now</a>
+                <a href ="detailsRental.html?car=2024-kia-ev6" class="btn">Rent Now</a>
             </div>
             <div class="box">
                 <div class="box-img">
                     <img src="img/Ford.jpg" alt="">
                 </div>
                 <p> 2023</p>
-                <h3> 2023 Ford F-150</h3>
+                <h3> 2023 Ford F150</h3>
                 <h2>$57,086 | $721 <span>/month</span></h2>
-                <a href ="#" class="btn">Rent Now</a>
+                <a href ="detailsRental.html?car=2023-ford-f150" class="btn">Rent Now</a>
             </div>
          
     </section>
+    
     <script src="logout.js"></script>
-      
+    <script src="./checkLoginStatus.js"></script>
+    <script src="rentalCarInfo.js"></script>
+    <!-- <script src="./carBoxRental.js"></script> -->
 </html>

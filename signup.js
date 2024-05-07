@@ -3,21 +3,17 @@ document.getElementById("sign-form").addEventListener("submit", signup);
 async function signup(event) {
   event.preventDefault(); //prevent POST method
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const lastName = document.getElementById("lastName").value;
-  const firstName = document.getElementById("firstName").value;
-  const dateBirth = document.getElementById("DoB").value;
-  const licenseNumber = document.getElementById("licenseNumber").value;
-
+  const userData = {
+    firstName: document.getElementById('firstName').value,
+    lastName: document.getElementById('lastName').value,
+    email: document.getElementById('email').value,
+    password: btoa(document.getElementById('password').value),
+    licenseNumber: document.getElementById('licenseNumber').value
+  };
   // Save in localStorage
-  localStorage.setItem("firstName", firstName);
-  localStorage.setItem("lastName", lastName);
-  localStorage.setItem("email", email);
-  localStorage.setItem("dateBirth", dateBirth);
-  localStorage.setItem("licenseNumber", licenseNumber);
-
-  window.location.href = "user.html";
+  localStorage.setItem('userData', JSON.stringify(userData));
+  localStorage.setItem('isLoggedIn', 'true'); // Đặt trạng thái đăng nhập là true
+  window.location.href = 'isLogged.html';
   // Save data in server
 
   // const response = await postNewUser(

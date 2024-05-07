@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Car Rental Website</title>
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="detailsRental.css" />
+    <!--Box Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header><header>
+        <a href="./isLogged.html" class="logo">
+            <img src="img/jeep.png" height="28" alt=""></a>
+    
+    <div class="bx bx-menu " id="menu-icon"></div>
+   <ul class="navbar">
+    <li><a href="./user.html">User Information</a></li> 
+    <li><a href="./isLogged.html">Create Rent</a></li>
+    <li><a href="About">Edit User</a></li>
+    <li><a href="Review">Edit Rent</a></li>
+   </ul>    
+   <div class="header-btn">
+    <a href="./login.html" class="sign-in" id="logoutButton">Log out</a>
+   </div>
+    </header>
+   <section class="car-details">
+      <div class="text">
+        <h1><span> Your car</span></h1>
+      </div>
+      <div class="car-container">
+        <div class="car-box">
+          <section id="carDetails"></section>
+          <label for="location">Location:</label>
+          <span id="displayLocation"></span>
+          <label for="dateBook">Date Pick Up:</label>
+          <span id="displayDateBook"></span>
+          <label for="dateReturn">Date Return:</label>
+          <span id="displayDateReturn"></span>
+        </div>
+      </div>
+    </section>
+
+    <script src="./carBoxRental.js"></script>
+    
+    <script src="./rentalCarGET.js "></script>
+  </body>
+</html>
